@@ -62,4 +62,16 @@ class ApiController extends Controller
 
     }
 
+    public function allSongs() {
+        $songs = Song::all();
+        return response()->json($songs);
+    }
+
+    public function filterSong($id) {
+        $song = Song::query()
+            ->where(['id'=>$id])
+            ->first();
+        return response()->json($song,200);
+    }
+
 }

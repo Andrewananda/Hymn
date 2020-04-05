@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c396f859-47fa-467e-8fe3-9a3a24461d3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Hymns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Hymns.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,11 +139,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586102203453</updated>
-      <workItem from="1586102207142" duration="3469000" />
+      <workItem from="1586102207142" duration="7091000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="347" y="168" key="run.anything.popup" timestamp="1586109010769">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="347" y="168" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1586109010769" />
   </component>
 </project>
