@@ -20,14 +20,14 @@ class ApiController extends Controller
     }
 
     public function createSong(Request $request) {
-        $validation = $request->validate([
+        $songValidation = $request->validate([
             'title'=>'required',
             'number'=>'required',
             'chorus'=>'required',
             'song'=>'required',
             'category_id'=>'required'
         ]);
-        if (!$validation) {
+        if (!$songValidation) {
             return response()->json(['message'=>'Input error, kindly fill all fields'],401);
         }
         $song = new Song();

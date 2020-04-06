@@ -5,13 +5,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/SongTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/SongTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -123,11 +124,25 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.SongTest.testExample">
+    <configuration name="SongTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\SongTest" file="$PROJECT_DIR$/tests/Feature/SongTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SongTest.testExample" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\SongTest" file="$PROJECT_DIR$/tests/Feature/SongTest.php" method="testExample" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.SongTest.testExample" />
+        <item itemvalue="PHPUnit.SongTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -139,7 +154,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586102203453</updated>
-      <workItem from="1586102207142" duration="7091000" />
+      <workItem from="1586102207142" duration="9874000" />
+      <workItem from="1586155693652" duration="25000" />
+      <workItem from="1586175371960" duration="945000" />
     </task>
     <servers />
   </component>
@@ -147,6 +164,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="309" y="0" width="751" height="768" key="#SongTest" timestamp="1586110977354">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="309" y="0" width="751" height="768" key="#SongTest.testExample" timestamp="1586110991594">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="309" y="0" width="751" height="768" key="#SongTest.testExample/0.0.1366.768@0.0.1366.768" timestamp="1586110991594" />
+    <state x="309" y="0" width="751" height="768" key="#SongTest/0.0.1366.768@0.0.1366.768" timestamp="1586110977354" />
+    <state x="339" y="210" key="com.intellij.ide.util.TipDialog" timestamp="1586155695273">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="339" y="210" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1586155695273" />
     <state x="347" y="168" key="run.anything.popup" timestamp="1586109010769">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

@@ -17,8 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 
 });
-Route::post('song','ApiController@createSong');
-Route::post('category','ApiController@createCategory');
+Route::post('create-song','ApiController@createSong');
+Route::post('create-category','ApiController@createCategory');
 Route::post('update-song/{id}','ApiController@updateSong');
 Route::get('songs','ApiController@allSongs');
 Route::get('single-song/{id}','ApiController@filterSong');

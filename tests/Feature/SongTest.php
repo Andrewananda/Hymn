@@ -15,16 +15,10 @@ class SongTest extends TestCase
      */
     public function testExample()
     {
-        $response = $this->postJson('/api/song',[
-            'title'=>'Amazing Grace',
-            'number'=>'101',
-            'chorus'=>'Amazing Grace Amazing Grace Amazing Grace Amazing Grace',
-            'song'=>'Amazing Grace Amazing Grace Amazing Grace Amazing Grace',
-            'category_id'=>'1'
-        ]);
+        $response = $this->postJson('/api/category',['name'=>'Swahili']);
 
         $response
             ->assertStatus(201)
-            ->assertExactJson(['message'=>'Successfully Created']);
+            ->assertJson(['message'=>'Successfully Created']);
     }
 }
