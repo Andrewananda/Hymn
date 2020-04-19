@@ -62,8 +62,13 @@ class ApiController extends Controller
 
     }
 
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     * get songs with [category] and paginate to 10 per page
+     */
     public function allSongs() {
-        $songs = Song::all();
+        $songs = Song::with('category')->paginate(10);
+        
         return response()->json($songs);
     }
 

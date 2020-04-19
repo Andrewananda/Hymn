@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c396f859-47fa-467e-8fe3-9a3a24461d3e" name="Default Changelist" comment="" />
+    <list default="true" id="c396f859-47fa-467e-8fe3-9a3a24461d3e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,6 +122,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected="PHPUnit.SongTest.testExample">
     <configuration name="SongTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -152,6 +157,7 @@
       <workItem from="1586102207142" duration="9874000" />
       <workItem from="1586155693652" duration="25000" />
       <workItem from="1586175371960" duration="1236000" />
+      <workItem from="1587298967909" duration="1596000" />
     </task>
     <servers />
   </component>
