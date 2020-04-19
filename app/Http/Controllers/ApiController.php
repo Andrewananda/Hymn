@@ -68,7 +68,7 @@ class ApiController extends Controller
      */
     public function allSongs() {
         $songs = Song::with('category')->paginate(10);
-        
+
         return response()->json($songs);
     }
 
