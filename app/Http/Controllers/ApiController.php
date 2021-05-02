@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Song;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ApiController extends Controller
 {
     public function createCategory(Request $request) {
-      $validation = $request->validate(['name'=>'required' ]);
-      if (!$validation){
-          return response()->json(['message'=>'Input field name'],401);
+
+      $validation = Validator::make($request->all(),['name'=>'required' ]);
+      if ($validation->fails()){
+          return GeneralResponseController::getErrorResponse('Input name is required');
       }
       $category = new Category();
       $category->name = $request->name;
@@ -20,15 +22,15 @@ class ApiController extends Controller
     }
 
     public function createSong(Request $request) {
-        $songValidation = $request->validate([
+        $songValidation = Validator::make($request->all(), [
             'title'=>'required',
             'number'=>'required',
             'chorus'=>'required',
             'song'=>'required',
             'category_id'=>'required'
         ]);
-        if (!$songValidation) {
-            return response()->json(['message'=>'Input error, kindly fill all fields'],401);
+        if ($songValidation->fails()) {
+            return GeneralResponseController::getErrorResponse('Input error, kindly provide all fields');
         }
         $song = new Song();
         $song->title = $request->title;
@@ -41,15 +43,15 @@ class ApiController extends Controller
     }
 
     public function updateSong(Request $request,$id) {
-        $updateValidation = $request->validate([
+        $updateValidation = Validator::make($request->all(), [
             'title'=>'required',
             'number'=>'required',
             'chorus'=>'required',
             'song'=>'required',
             'category_id'=>'required'
         ]);
-        if (!$updateValidation) {
-            return response()->json(['message'=>'Input error, kindly fill all fields'],401);
+        if ($updateValidation->fails()) {
+            return GeneralResponseController::getErrorResponse('Input error, kindly provide all fields');
         }
         $song = Song::where(['id'=>$id]);
         $song->title = $request->title;
@@ -67,9 +69,10 @@ class ApiController extends Controller
      * get songs with [category] and paginate to 10 per page
      */
     public function allSongs() {
-        $songs = Song::with('category')->paginate(10);
+        $songs = Song::with('category')->get();
+        $count = count($songs);
 
-        return response()->json($songs);
+        return GeneralResponseController::getSuccessResponse($songs,'Songs Fetched Successfully',$count);
     }
 
     public function filterSong($id) {
