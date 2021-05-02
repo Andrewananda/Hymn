@@ -80,7 +80,7 @@ class HymnController extends Controller
 
                 $song->save();
 
-                return redirect()->back()->with(['success'=>'Hymn created successfully');
+                return redirect()->back()->with(['success'=>'Hymn created successfully']);
             }
         }
     }

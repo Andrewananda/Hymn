@@ -26,12 +26,10 @@
                 <span class="nav-text">Category</span>
             </a>
             <ul aria-expanded="false">
-                <li><a href="{{ route('category.add') }}">All Categories</a></li>
-                <li><a href="">Add Category</a></li>
+                <li><a href="{{ route('category.all') }}">All Categories</a></li>
+                <li><a href="{{ route('category.add') }}">Add Category</a></li>
             </ul>
         </li>
-
-
 
         <li>
             <a href="{{route('logout')}}">
