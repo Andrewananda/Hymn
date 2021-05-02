@@ -70,6 +70,7 @@ class CategoryController extends Controller
             return redirect()->back()->with(['error'=>'Cannot find the category selected']);
         } else {
             $category->delete();
+
             return redirect()->back()->with(['success'=>'Deleted successfully']);
         }
     }

@@ -1,9 +1,7 @@
 <div class="deznav-scroll">
     <div class="main-profile">
-        <img src="{{asset('assets/images/Untitled-1.jpg')}}" alt="">
-        <a href="javascript:void(0);"><i class="fa fa-cog" aria-hidden="true"></i></a>
-        <h5 class="mb-0 fs-20 text-black "><span class="font-w400">Hello,</span> Marquez</h5>
-        <p class="mb-0 fs-14 font-w400">marquezzzz@mail.com</p>
+        <h5 class="mb-0 fs-20 text-black "><span class="font-w400">Hello,</span> {{ \Illuminate\Support\Facades\Auth::user()->name }}</h5>
+        <p class="mb-0 fs-14 font-w400">{{ \Illuminate\Support\Facades\Auth::user()->email }}</p>
     </div>
     <ul class="metismenu" id="menu">
         <li><a class="ai-icon" href="#" aria-expanded="false">
@@ -16,8 +14,8 @@
                 <span class="nav-text">Hymn</span>
             </a>
             <ul aria-expanded="false">
-                <li><a href="./app-profile.html">All Hymns</a></li>
-                <li><a href="">Add Hymn</a></li>
+                <li><a href="{{ route('hymn.all') }}">All Hymns</a></li>
+                <li><a href="{{ route('hymn.add') }}">Add Hymn</a></li>
             </ul>
         </li>
 

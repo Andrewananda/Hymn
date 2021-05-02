@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Validator;
 
 class HymnController extends Controller
 {
-    public function edit_hymn(Request $request,$id) {
+    public function create_edit(Request $request,$id) {
         $song = Song::where(['id'=>$id])->first();
 
         if(!$song) {
@@ -43,39 +43,50 @@ class HymnController extends Controller
         }
     }
 
+    public function edit_hymn($id) {
+        $song = Song::where(['id'=>$id])->first();
+
+        if (!$song) {
+            return redirect()->back()->with(['warning'=>'Song cannot be found']);
+        }else{
+            return view('hymn.edit_song',['song'=>$song]);
+        }
+    }
+
     public function delete_hymn($id) {
         $song = Song::where(['id'=>$id])->first();
         if (!$song){
             return redirect()->back()->with(['warning'=>'Song you selected does not exist']);
         }else{
             $song->delete();
-            return redirect()->route('home')->with(['success'=>'Song deleted successfully']);
+            return redirect()->back()->with(['success'=>'Song deleted successfully']);
         }
     }
 
-    public function create_song(Request $request) {
+    public function create_hymn(Request $request) {
         $validation = Validator::make($request->all(), [
             'title'=>'required',
             'number'=>'required',
             'chorus'=>'required',
-            'song'=>'required',
-            'category_id'=>'required'
+            'category_id'=>'required',
+            'description'=>'required'
         ]);
 
         if ($validation->fails()) {
-            return redirect()->back()->with(['error'=>'All fields are required']);
+            return redirect()->back()->with(['warning'=>'All fields are required']);
         } else {
-            $category = Category::where(['id'=>$request->category_id])->first();
+            $category_id = $request->post('category_id');
+            $category = Category::where(['id'=>$category_id])->first();
 
             if (!$category){
-                return redirect()->back()->with(['error'=>'The song category you selected does not exist']);
+                return redirect()->back()->with(['warning'=>'The song category you selected does not exist']);
             }else {
                 $song = new Song();
 
                 $song->title = $request->post('title');
                 $song->number = $request->post('number');
                 $song->chorus = $request->post('chorus');
-                $song->song = $request->post('song');
+                $song->song = $request->post('description');
                 $song->category_id = $request->post('category_id');
 
                 $song->save();
@@ -85,5 +96,14 @@ class HymnController extends Controller
         }
     }
 
+    public function add_hymn() {
+        return view('hymn.add_song');
+    }
+
+    public function all_hymns() {
+        $songs = Song::all();
+
+        return view('hymn.all_songs', ['songs'=>$songs]);
+    }
 
 }
