@@ -3,7 +3,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">All Hymns</h4>
+                <h4 class="card-title">All Categories</h4>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -12,20 +12,16 @@
                         <thead>
                         <tr>
                             <th>Title</th>
-                            <th>Number</th>
-                            <th>Category</th>
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($songs as $song)
+                        @foreach ($categories as $category)
                             <tr>
-                                <td>{{ $song->title }}</td>
-                                <td>{{ $song->number }}</td>
-                                <td>{{ $song->category->title }}</td>
+                                <td>{{ $category->name }}</td>
                                 <td>
-                                    <a class="btn btn-success" href="{{ route('edit.hymn',['id'=> $song->id]) }}">Edit</a>
-                                    <a class="btn btn-danger" href="{{ route('delete.hymn',['id'=>$song->id]) }}">Delete</a>
+                                    <a class="btn btn-success" href="{{ route('category.edit',['id'=> $category->id]) }}">Edit</a>
+                                    <a class="btn btn-danger" href="{{ route('category.delete',['id'=>$category->id]) }}">Delete</a>
                                 </td>
                             </tr>
                         @endforeach
@@ -33,8 +29,6 @@
                         <tfoot>
                         <tr>
                             <th>Title</th>
-                            <th>Number</th>
-                            <th>Category</th>
                             <th>Action</th>
                         </tr>
                         </tfoot>
