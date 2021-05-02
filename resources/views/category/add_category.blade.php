@@ -16,7 +16,7 @@
                                 <input name="name" id="name" type="text" class="form-control" placeholder="Enter hymn category title">
                             </div>
                             <div class="form-group col-md-12">
-                                <textarea id="description" name="description" style="padding: 10px" placeholder="Enter Car Model Description" cols="100" rows="10"></textarea>
+                                <textarea id="description" name="description" style="padding: 10px" placeholder="Enter hymn description" cols="100" rows="10"></textarea>
                             </div>
 
                         </div>
