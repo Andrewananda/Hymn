@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c396f859-47fa-467e-8fe3-9a3a24461d3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/hymn/add_song.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/hymn/all_songs.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/hymn/edit_song.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HymnController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HymnController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/vendor/svganimation/vivus.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/vendor/svganimation/vivus.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/category/add_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/add_category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +182,9 @@
       <workItem from="1594884609920" duration="22000" />
       <workItem from="1594914268498" duration="1368000" />
       <workItem from="1594923975907" duration="189000" />
-      <workItem from="1619833442163" duration="11271000" />
+      <workItem from="1619833442163" duration="13100000" />
+      <workItem from="1621402575691" duration="284000" />
+      <workItem from="1622276640916" duration="641000" />
     </task>
     <servers />
   </component>
@@ -206,5 +201,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

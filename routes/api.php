@@ -22,3 +22,4 @@ Route::post('create-category','ApiController@createCategory');
 Route::post('update-song/{id}','ApiController@updateSong');
 Route::get('songs','ApiController@allSongs');
 Route::get('single-song/{id}','ApiController@filterSong');
+Route::post('/search', 'ApiController@search')->name('search');

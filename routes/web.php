@@ -18,10 +18,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/edit/{id}', 'HymnController@edit_hymn')->name('edit.hymn');
-Route::get('/delete/{id}', 'HymnController@delete_hymn')->name('edit.hymn');
+Route::get('/delete/{id}', 'HymnController@delete_hymn')->name('delete.hymn');
 Route::get('/hymn', 'HymnController@add_hymn')->name('hymn.add');
 Route::get('/all_hymns', 'HymnController@all_hymns')->name('hymn.all');
 Route::post('/create_hymn', 'HymnController@create_hymn')->name('hymn.create');
+
 
 //Category
 Route::get('/add_category', 'CategoryController@index')->name('category.add');
