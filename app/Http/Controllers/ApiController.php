@@ -86,8 +86,8 @@ class ApiController extends Controller
         //check model
         $valueToLower = strtolower($request->post('value'));
         $model = Song::query()
-            ->where('title', 'LIKE', $valueToLower)
-            ->orWhere('chorus', 'LIKE', $valueToLower)
+            ->where('title', 'LIKE', '%' . $valueToLower . '%')
+            ->orWhere('chorus', 'LIKE', '%' .$valueToLower . '%')
             ->with('category')
             ->get();
         return GeneralResponseController::getSuccessResponse($model, 'Fetched successfully', count($model));
