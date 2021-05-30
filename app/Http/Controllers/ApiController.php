@@ -82,4 +82,15 @@ class ApiController extends Controller
         return response()->json($song,200);
     }
 
+    public function search(Request $request) {
+        //check model
+        $valueToLower = strtolower($request->post('value'));
+        $model = Song::query()
+            ->where('title', 'LIKE', '%' . $valueToLower . '%')
+            ->orWhere('chorus', 'LIKE', '%' .$valueToLower . '%')
+            ->with('category')
+            ->get();
+        return GeneralResponseController::getSuccessResponse($model, 'Fetched successfully', count($model));
+    }
+
 }
