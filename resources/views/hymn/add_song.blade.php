@@ -55,6 +55,7 @@
                             <textarea id="description" name="description" style="padding: 10px" placeholder="Enter song" cols="100" rows="10"></textarea>
                         </div>
                     </div>
+                    
                 </div>
 
             </div>
