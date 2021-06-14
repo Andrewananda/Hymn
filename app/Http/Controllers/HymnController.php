@@ -48,7 +48,7 @@ class HymnController extends Controller
         $song = Song::where(['id'=>$id])->first();
         $categories = Category::all();
         if (!$song) {
-            return redirect()->back()->with(['warning'=>'Song cannot be found']);
+            return view('layouts.page404', ['message'=>'Hymn not found']);
         }else{
             return view('hymn.edit_song',['hymn'=>$song, 'categories'=>$categories]);
         }
@@ -111,7 +111,7 @@ class HymnController extends Controller
     public function actual_edit($id, Request $request) {
         $song = Song::where(['id'=>$id])->first();
         if (!$song) {
-            return redirect()->back()->with(['error'=>'Hymn not found']);
+            return view('layouts.page404', ['message'=>'Hymn not found']);
         }else {
             $validation = Validator::make($request->all(), [
                 'title'=>'required',

@@ -39,7 +39,7 @@ class CategoryController extends Controller
         $category = Category::where(['id'=>$id])->first();
 
         if (!$category){
-            return redirect()->back()->with(['error'=>'Category cannot be found']);
+            return view('layouts.page404', ['message'=>'Category not found']);
         }else{
             $validation = Validator::make($request->all(), [
                 'name'=>'required'
@@ -58,7 +58,7 @@ class CategoryController extends Controller
         $category = Category::where(['id'=>$id])->first();
 
         if (!$category) {
-            return redirect()->back()->with(['warning'=>'Song category cannot be found']);
+            return view('layouts.page404', ['message'=>'Hymn category not found']);
         }else{
             return view('category.edit_category', ['category'=>$category]);
         }
@@ -67,7 +67,7 @@ class CategoryController extends Controller
     public function delete_category($id) {
         $category = Category::where(['id'=>$id])->first();
         if (!$category) {
-            return redirect()->back()->with(['error'=>'Cannot find the category selected']);
+            return view('layouts.page404', ['message'=>'Hymn category not found n our records']);
         } else {
             $category->delete();
 
