@@ -23,10 +23,9 @@
                                 <tr>
                                     <td>{{ $song->title }}</td>
                                     <td>{{ $song->number }}</td>
-                                    <td>{{ $song->category->title }}</td>
+                                    <td>{{ $song->category->name }}</td>
                                     <td>
                                         <a class="btn btn-success" href="{{ route('edit.hymn',['id'=> $song->id]) }}">Edit</a>
-                                        <a class="btn btn-danger" href="{{ route('delete.hymn',['id'=>$song->id]) }}">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach

@@ -21,7 +21,7 @@
                 <div class="col-md-6">
                     <div class="box-body">
                         <div class="form-group">
-                            <textarea id="description" name="description" style="padding: 10px" placeholder="Enter song" cols="100" rows="10"></textarea>
+                            <textarea name="description" style="padding: 10px" placeholder="Enter song" cols="100" rows="10"></textarea>
                         </div>
                     </div>
                 </div>

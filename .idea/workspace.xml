@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c396f859-47fa-467e-8fe3-9a3a24461d3e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/category/add_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/add_category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/category/edit_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/edit_category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/hymn/add_song.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hymn/add_song.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/hymn/all_songs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hymn/all_songs.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +197,7 @@
       <workItem from="1621402575691" duration="284000" />
       <workItem from="1622276640916" duration="1913000" />
       <workItem from="1623663838156" duration="869000" />
-      <workItem from="1623668413945" duration="4399000" />
+      <workItem from="1623668413945" duration="4946000" />
     </task>
     <servers />
   </component>

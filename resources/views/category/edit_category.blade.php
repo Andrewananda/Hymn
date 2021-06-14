@@ -1,29 +1,36 @@
 @extends('layouts.app')
 @section('content')
-    <div class="col-xl-12 col-lg-12" style="padding: 15px">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title">Edit Hymn Category</h4>
-            </div>
-            <div class="card-body">
-                <div class="basic-form">
-                    <form method="post" action="{{ route('category.save_edit', ['id'=>$category->id]) }}">
-                        @include('layouts.message')
-                        @csrf
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label>Title</label>
-                                <input name="name" id="name" value="{{ $category->name }}" type="text" class="form-control" placeholder="Enter hymn category title">
-                            </div>
-                            <div class="form-group col-md-12">
-                                <textarea id="description" name="description" style="padding: 10px" placeholder="Enter Car Model Description" cols="100" rows="10"></textarea>
-                            </div>
-
-                        </div>
-                        <button type="submit" class="btn btn-primary">Save</button>
-                    </form>
-                </div>
-            </div>
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">Edit Hymn Category</h3>
         </div>
+        @include('layouts.message')
+        <form enctype="multipart/form-data" method="post" action="{{ route('category.create') }}">
+            @csrf
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label for="first_name">Title</label>
+                            <input type="text" name="title" value="{{$category->name}}" class="form-control" id="title" placeholder="Add Title">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <textarea name="description" style="padding: 10px" placeholder="Enter song" cols="100" rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="box-body">
+                <button type="submit" style="display:block;margin: 0% 35%; width: 300px" class="btn btn-primary">Update</button>
+            </div>
+        </form>
+    </div>
     </div>
 @endsection
