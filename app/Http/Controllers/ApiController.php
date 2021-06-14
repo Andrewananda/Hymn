@@ -30,7 +30,7 @@ class ApiController extends Controller
             'category_id'=>'required'
         ]);
         if ($songValidation->fails()) {
-            return GeneralResponseController::getErrorResponse('Input error, kindly provide all fields');
+            return GeneralResponseController::getErrorResponse($songValidation->errors()->first());
         }
         $song = new Song();
         $song->title = $request->title;
@@ -51,7 +51,7 @@ class ApiController extends Controller
             'category_id'=>'required'
         ]);
         if ($updateValidation->fails()) {
-            return GeneralResponseController::getErrorResponse('Input error, kindly provide all fields');
+            return GeneralResponseController::getErrorResponse($updateValidation->errors()->first());
         }
         $song = Song::where(['id'=>$id]);
         $song->title = $request->title;
