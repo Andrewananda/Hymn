@@ -1,76 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Login</title>
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/favicon.png')}}">
-    <link href="{{asset('assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui">
+    <title>Car Hire</title>
+    <meta content="Admin Dashboard" name="description">
+    <meta content="Themesbrand" name="author">
+    <link rel="shortcut icon" href="{{ asset('asset/images/favicon.ico')}}">
+    <link href="{{ asset('asset/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('asset/css/metismenu.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('asset/css/icons.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('asset/css/style.css')}}" rel="stylesheet" type="text/css">
 </head>
-
-<body class="vh-100">
-<div class="authincation h-100">
-    <div class="container h-100">
-        <div class="row justify-content-center h-100 align-items-center">
-            <div class="col-md-6">
-                <div class="authincation-content">
-                    <div class="row no-gutters">
-                        <div class="col-xl-12">
-                            <div class="auth-form">
-                                <div class="text-center mb-3">
-                                    <img src="{{asset('assets/images/logo-full.png')}}" alt="">
-                                </div>
-                                <h4 class="text-center mb-4">Sign in your account</h4>
-                                <form action="{{route('login')}}" method="post">
-                                    @csrf
-                                    @include('layouts.message')
-                                    <div class="form-group">
-                                        <label class="mb-1"><strong>Email</strong></label>
-                                        <input type="email" class="form-control" name="email" value="hello@example.com">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="mb-1"><strong>Password</strong></label>
-                                        <input type="password" name="password" class="form-control" value="Password">
-                                    </div>
-                                    <div class="form-row d-flex justify-content-between mt-4 mb-2">
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox ml-1">
-                                                <input type="checkbox" class="custom-control-input" id="basic_checkbox_1">
-                                                <label class="custom-control-label" for="basic_checkbox_1">Remember Me</label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <a href="page-forgot-password.html">Forgot Password?</a>
-                                        </div>
-                                    </div>
-                                    <div class="text-center">
-                                        <button class="btn btn-primary btn-block" type="submit">Sign In</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+<body><!-- Background -->
+<div class="account-pages"></div><!-- Begin page -->
+<div class="wrapper-page">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="text-center m-0">
+                <a href="{{ route('home') }}" class="logo logo-admin">
+                    <img src="{{ asset('asset/images/logo.png')}}" height="30" alt="logo">
+                </a>
+            </h3>
+            <div class="p-3"><h4 class="text-muted font-18 m-b-5 text-center">Welcome Back !</h4>
+                <p class="text-muted text-center">Sign in to continue to CarHire Admin.</p>
+                <form class="form-horizontal m-t-30" method="post" action="{{ route('login') }}">
+                    @csrf
+                    @include('layouts.message')
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Enter email">
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="userpassword">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary w-md waves-effect waves-light" type="submit">Log In</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</div>
-
-
-<!--**********************************
-    Scripts
-***********************************-->
-<!-- Required vendors -->
-<script src="{{asset('assets/vendor/global/global.min.js')}}"></script>
-<script src="{{asset('assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}"></script>
-<script src="{{asset('assets/js/custom.min.js')}}"></script>
-<script src="{{asset('assets/js/deznav-init.js')}}"></script>
-<script src="{{asset('assets/js/demo.js')}}"></script>
-{{--<script src="{{asset('assets/js/styleSwitcher.js')}}"></script>--}}
+    <div class="m-t-40 text-center">
+        <p class="text-muted">© 2021 Crafted with <i class="mdi mdi-heart text-danger"></i> by devstart</p>
+    </div>
+</div><!-- END wrapper --><!-- jQuery  -->
+<script src="{{ asset('asset/js/jquery.min.js')}}"></script>
+<script src="{{ asset('asset/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{ asset('asset/js/metisMenu.min.js')}}"></script>
+<script src="{{ asset('asset/js/jquery.slimscroll.js')}}"></script>
+<script src="{{ asset('asset/js/waves.min.js')}}"></script>
+<script src="{{ asset('asset/plugins/jquery-sparkline/jquery.sparkline.min.js')}}"></script><!-- App js -->
+<script src="{{ asset('asset/js/app.js')}}"></script>
 </body>
 </html>
