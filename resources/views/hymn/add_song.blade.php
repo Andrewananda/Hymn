@@ -31,7 +31,7 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label>Hymn Category</label>
-                            <select class="form-control select2" name="user_id" id="user_id" style="width: 100%;">
+                            <select class="form-control select2" name="category_id" id="category_id" style="width: 100%;">
                                 <option selected="selected">Hymn category</option>
                                 @foreach($hymn_categories as $hymn_category)
                                     <option value="{{ $hymn_category->id }}">{{$hymn_category->name}}</option>
