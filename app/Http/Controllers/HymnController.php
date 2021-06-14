@@ -97,7 +97,8 @@ class HymnController extends Controller
     }
 
     public function add_hymn() {
-        return view('hymn.add_song');
+        $hymn_categories = Category::query()->orderBy('id', 'desc')->get();
+        return view('hymn.add_song',['hymn_categories'=>$hymn_categories]);
     }
 
     public function all_hymns() {
